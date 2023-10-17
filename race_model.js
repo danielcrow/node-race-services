@@ -12,7 +12,7 @@ const pool = new Pool({
 });
 
 
-
+//sads
 const getSplits= () => {
     return new Promise(function(resolve, reject) {
       const sql = 'SELECT row_number() over (order by \'\') as id, array_agg(("SplitTime" - "LastSplitTime")) as splits ,bibnumber, first_name, last_name FROM splits group by bibnumber,first_name, last_name';
